@@ -1,0 +1,108 @@
+/* General page styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif; /* Welcome message font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 1s ease-in-out;
+}
+
+/* Welcome message styling */
+.message {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out, pulseEffect 6s infinite;
+}
+
+/* Beautiful purple background with animation */
+.purple-background {
+    background: linear-gradient(135deg, #7b4397, #dc2430);
+    background-size: 400% 400%;
+    animation: purpleGradient 10s ease infinite;
+}
+
+/* Purple gradient animation */
+@keyframes purpleGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Text animation for smooth fading in */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulsing effect to make the message lively */
+@keyframes pulseEffect {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Hidden class to initially hide aftermath */
+.hidden {
+    display: none;
+}
+
+/* Aftermath hacker background */
+.hacker-background {
+    background-color: black;
+}
+
+/* Oops glitch effect */
+.oops-glitch {
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    color: #ff0000;
+    text-align: center;
+    position: relative;
+    animation: glitch 1s infinite, explosion 1.5s ease-out;
+}
+
+/* Fail message styling */
+.fail-text {
+    font-family: 'VT323', monospace;
+    font-size: 2.5rem;
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Warning message styling */
+.warning-text {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Explosive glitch effect */
+@keyframes glitch {
+    0% { transform: skew(0.5deg, 0.5deg); }
+    10% { transform: translate(2px, 3px); }
+    20% { transform: translate(-1px, -3px); }
+    30% { transform: skew(-0.5deg, -0.5deg); }
+    40%, 100% { transform: none; }
+}
+
+/* Glitch text effect */
+@keyframes explosion {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(0.8); opacity: 0; }
+}
+
+/* Fade-in effect for aftermath texts */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
